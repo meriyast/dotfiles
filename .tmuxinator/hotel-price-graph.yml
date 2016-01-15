@@ -1,0 +1,29 @@
+# ~/.tmuxinator/hotel-price-graph.yml
+
+name: hotel-price-graph
+root: ~/
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+windows:
+  - editor:
+      layout: 1ad6,272x62,0,0{176x62,0,0[176x26,0,0,0,176x35,0,27{73x35,0,27,1,102x35,74,27,2}],95x62,177,0[95x31,177,0,3,95x30,177,32,6]} 
+      panes:
+        - cd /Users/mthomas/stash/web-wl
+        - cd /Users/mthomas/stash/ui-hotel-rate-graph-ie/ui-hotel-rate-graph
+        - cd /Users/mthomas/stash/ui-hotel-rate-graph-ie/ui-hotel-rate-graph && grunt
+        - cd /Users/mthomas/stash/vagrant-orbitz-workstation
+        - cd /Users/mthomas/stash/vagrant-orbitz-workstation
